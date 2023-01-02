@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.dx-scheduler-work-space-month .dx-scheduler-date-table-cell {
+  height: 100px;
+  vertical-align: top;
+  text-align: right;
+  color: #959595;
+}
+.dx-scheduler-date-table-cell {
+  height: 25px;
+}
+
+.dx-scheduler-time-panel-cell {
+    height: 25px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
