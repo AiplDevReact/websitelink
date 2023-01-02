@@ -1,5 +1,6 @@
 {
   "name": "starter-project",
+  "homepage": "https://AiplDevReact.github.io/websitelink",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,13 +10,16 @@
     "bootstrap": "^5.3.0-alpha1",
     "devextreme": "^22.2.3",
     "devextreme-react": "^22.2.3",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

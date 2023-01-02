@@ -1,3 +1,4 @@
+//eslint-disable-next-line
 import React, { useEffect,useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -34,21 +35,30 @@ const Ui = () => {
             })
         })
         .then(response => {
-            response.json().then((result) => {          
-                localStorage.setItem('login',result.data.token);
+            response.json().then((result) => {  
+                if(result.error==false){
+                    localStorage.setItem('login',result.data.token);
+                    // if(userName === 'TestManager' && password === '123123'){
+                        alert('successfully logged in');
+                        navigate('/Appointmentdesigns');
+                    // }
+                    // else{
+                    //     alert('Please enter valid username/password')
+                    // }
+                }  else{
+                    alert(result.message);
+                }  
+                
             }
             
             )
         }
             )
-        .catch((err) => console.log(err))   
-        if(userName === 'TestManager' && password === '123123'){
-            alert('successfully logged in')
-            navigate('/Appointmentdesigns')
-        }
-        else{
-            alert('Please enter valid username/password')
-        }
+        .catch((err) => {
+            console.log(err);
+            alert(err);
+        })   
+       
       
     }
 
