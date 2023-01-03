@@ -1,7 +1,9 @@
 import React from 'react';
 import Scheduler, { Resource, View, Scrolling } from 'devextreme-react/scheduler';
 import { useEffect,useState } from 'react';
-
+import '../devextreme.css';
+import '../poppermin.js';
+// import '../index.css';
 const Appointment = () => {
 
   const [data, setData] = useState([]);

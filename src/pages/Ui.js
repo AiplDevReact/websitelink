@@ -1,7 +1,7 @@
 //eslint-disable-next-line
-import React, { useEffect,useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-
+import React, { useEffect,useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../bootstrap.css';
 const Ui = () => {
 
     const navigate = useNavigate();
@@ -36,7 +36,7 @@ const Ui = () => {
         })
         .then(response => {
             response.json().then((result) => {  
-                if(result.error==false){
+                if(result.error === false){
                     localStorage.setItem('login',result.data.token);
                     // if(userName === 'TestManager' && password === '123123'){
                         alert('successfully logged in');
